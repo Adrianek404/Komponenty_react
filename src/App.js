@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import MenuStyledComponents from "./komponenty/MenuStyledComponents";
+import {InfoPanelContainer} from "./komponenty/Klasowy";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <MenuStyledComponents />
+        <InfoPanelContainer data={[
+            { title: "Panel 1", content: "Treść 1" },
+            { title: "Panel 2", content: "Treść 2" },
+            { title: "Panel 3", content: "Treść 3" }
+        ]} />
     </div>
   );
 }
